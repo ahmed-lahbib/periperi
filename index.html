@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Peri Peri — Restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Bebas+Neue&family=Cairo:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0A0A0A] text-neutral-100 selection:bg-brand-red min-h-screen flex flex-col">
+
+<header class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-md border-b border-brand-border/80">
+ <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+  <a href="#hero" class="flex items-center gap-3 group rounded-lg p-1">
+   <img src="images/logo.jpg" alt="" width="48" height="48" class="w-12 h-12 rounded-full object-cover border-2 border-brand-orange/60">
+   <span class="font-flame text-2xl leading-none text-white group-hover:text-brand-orange transition-colors">PERI PERI</span>
+  </a>
+  <nav aria-label="Main" class="hidden md:flex items-center gap-8">
+   <a class="text-sm font-bold uppercase tracking-wider text-neutral-300 hover:text-brand-orange transition-colors py-2" href="#menu" data-i="n_menu">المنيو</a>
+   <a class="text-sm font-bold uppercase tracking-wider text-neutral-300 hover:text-brand-orange transition-colors py-2" href="#gallery" data-i="n_gal">المعرض</a>
+   <a class="text-sm font-bold uppercase tracking-wider text-neutral-300 hover:text-brand-orange transition-colors py-2" href="#hours" data-i="n_hours">ساعات العمل</a>
+   <a class="text-sm font-bold uppercase tracking-wider text-neutral-300 hover:text-brand-orange transition-colors py-2" href="#contact" data-i="n_contact">تواصل</a>
+  </nav>
+  <div class="flex items-center gap-3">
+   <button id="lang" type="button" class="h-11 px-4 rounded-full bg-[#181818] border border-brand-border hover:border-brand-orange text-xs font-bold flex items-center gap-2 active:scale-95"><span id="l1" class="text-brand-orange"></span><span class="text-neutral-400">|</span><span id="l2" class="text-white"></span></button>
+   <a class="md:hidden h-11 px-4 rounded-full bg-brand-red text-white text-xs font-bold flex items-center" href="#menu" data-i="n_menu">المنيو</a>
+  </div>
+ </div>
+</header>
+
+<main class="flex-grow">
+<section id="hero" class="relative pt-8 pb-16 md:py-24 overflow-hidden border-b border-brand-border bg-gradient-to-b from-[#140b0a] via-[#0A0A0A] to-[#0A0A0A]">
+ <div aria-hidden="true" class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+ <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center text-center">
+  <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/20 border border-brand-red/50 text-brand-orange text-xs font-extrabold uppercase tracking-widest mb-4">
+   <span aria-hidden="true" class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span><span data-i="pill">دجاج مشوي على اللهب</span>
+  </div>
+  <div id="slide" class="fade flex flex-col items-center">
+   <h1 class="font-flame text-5xl sm:text-7xl md:text-8xl text-white leading-none uppercase max-w-4xl mb-4"><span id="ha">مشوي على اللهب</span> <span id="hb" class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-orange">أجنحة الدجاج</span></h1>
+   <div class="flex items-center justify-center gap-3 mb-6 flex-wrap">
+    <span id="hp" dir="ltr" class="px-5 py-2 rounded-full bg-brand-orange text-black font-condensed font-extrabold text-2xl tracking-wider shadow-lg shadow-brand-orange/20">26 DT</span>
+    <span id="hs" class="px-3.5 py-1.5 rounded-full bg-[#1F1F1F] border border-brand-border text-neutral-300 text-xs font-bold"></span>
+   </div>
+   <p id="hd" class="max-w-2xl text-brand-muted text-base sm:text-lg leading-relaxed mb-10 min-h-[4.5rem]"></p>
+   <div class="relative mb-10">
+    <div class="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full hero-glow p-2 bg-gradient-to-tr from-brand-red via-brand-orange to-brand-red">
+     <div class="w-full h-full rounded-full overflow-hidden bg-black p-1"><img id="hi" src="images/c-wings.jpg" alt="Peri Peri" width="384" height="384" class="w-full h-full object-cover rounded-full"></div>
+    </div>
+    <div id="hbadge" class="hidden absolute -bottom-3 end-2 sm:end-6 bg-brand-card border border-brand-orange/50 rounded-2xl px-4 py-2 shadow-2xl text-start">
+     <p id="hbl" class="text-[10px] uppercase text-brand-muted font-bold tracking-wider leading-none"></p>
+     <p id="hbv" class="font-condensed font-bold text-sm text-brand-orange"></p>
+    </div>
+   </div>
+  </div>
+  <div dir="ltr" class="flex items-center justify-center gap-4">
+   <button id="pv" type="button" aria-label="Previous" class="w-12 h-12 rounded-full bg-[#181818] border border-brand-border text-neutral-300 hover:text-white hover:border-brand-orange flex items-center justify-center active:scale-95"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+   <div class="px-4 py-2 rounded-full bg-[#141414] border border-brand-border/60 text-xs font-bold tracking-widest font-condensed"><span id="pc" class="text-brand-orange"></span> / <span id="pt" class="text-neutral-400"></span></div>
+   <button id="nx" type="button" aria-label="Next" class="w-12 h-12 rounded-full bg-[#181818] border border-brand-border text-neutral-300 hover:text-white hover:border-brand-orange flex items-center justify-center active:scale-95"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+ </div>
+</section>
+
+<section id="menu" class="py-16 md:py-24 border-b border-brand-border bg-[#0E0E0E]">
+ <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="flex flex-col items-center text-center mb-8">
+   <span class="text-brand-orange font-bold text-xs uppercase tracking-widest mb-2 font-condensed" data-i="m_eye">استمتع بالطعم</span>
+   <h2 class="font-flame text-4xl sm:text-6xl text-white" data-i="m_title">قائمتنا</h2>
+   <div class="w-16 h-1 bg-gradient-to-r from-brand-red to-brand-orange rounded-full mt-3"></div>
+   <p class="text-brand-muted text-sm mt-3" data-i="m_sub">الأسعار بالدينار التونسي (DT). أسماء الأطباق ووصفها كما في المنيو الأصلي.</p>
+  </div>
+  <div class="relative mb-8 -mx-4 px-4 sm:mx-0 sm:px-0"><nav id="tabs" role="tablist" aria-label="Menu" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3"></nav></div>
+  <noscript><p class="text-center text-neutral-300 mb-6"><a class="text-brand-orange underline" href="images/menu.jpg">Menu (image)</a></p></noscript>
+  <div id="note"></div>
+  <div id="grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6"></div>
+  <div id="heat"></div>
+  <p class="text-center mt-8"><a href="images/menu.jpg" target="_blank" rel="noopener" class="inline-block py-3 text-sm text-brand-orange underline underline-offset-4" data-i="m_orig">عرض المنيو الأصلي كصورة</a></p>
+ </div>
+</section>
+
+<section id="gallery" class="py-16 md:py-24 border-b border-brand-border bg-[#0A0A0A]">
+ <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="flex flex-col items-center text-center mb-12">
+   <span class="text-brand-orange font-bold text-xs uppercase tracking-widest mb-2 font-condensed" data-i="g_eye">الأجواء والنكهات</span>
+   <h2 class="font-flame text-4xl sm:text-6xl text-white" data-i="g_title">المعرض</h2>
+   <div class="w-16 h-1 bg-gradient-to-r from-brand-red to-brand-orange rounded-full mt-3"></div>
+  </div>
+  <div id="gal" class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6"></div>
+ </div>
+</section>
+
+<section id="hours" class="py-12 bg-gradient-to-b from-[#121212] to-[#0A0A0A] border-b border-brand-border">
+ <div class="max-w-4xl mx-auto px-4 sm:px-6">
+  <div class="p-6 sm:p-8 rounded-3xl bg-[#181818] border border-brand-border shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+   <div class="flex items-center gap-4 text-center md:text-start flex-col md:flex-row">
+    <div class="w-14 h-14 rounded-2xl bg-brand-red/10 border border-brand-red/40 flex items-center justify-center shrink-0 text-brand-orange">
+     <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div>
+     <p class="text-xs font-bold uppercase tracking-widest text-brand-muted font-condensed" data-i="h_label">ساعات العمل</p>
+     <h3 class="font-flame text-3xl sm:text-4xl text-white mt-0.5"><span dir="ltr" class="inline-block">11:00 AM – 1:00 AM</span> <span class="text-brand-orange" data-i="h_every">كل يوم</span></h3>
+    </div>
+   </div>
+   <span id="st" class="px-5 py-2.5 rounded-full border text-xs sm:text-sm font-bold flex items-center gap-2.5"></span>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="py-16 md:py-24 border-b border-brand-border bg-[#0E0E0E]">
+ <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="flex flex-col items-center text-center mb-12">
+   <span class="text-brand-orange font-bold text-xs uppercase tracking-widest mb-2 font-condensed" data-i="c_eye">للتواصل والزيارة</span>
+   <h2 class="font-flame text-4xl sm:text-6xl text-white" data-i="c_title">تواصل معنا</h2>
+   <div class="w-16 h-1 bg-gradient-to-r from-brand-red to-brand-orange rounded-full mt-3"></div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+   <div class="lg:col-span-5 flex flex-col gap-4">
+    <a href="tel:+21699181337" class="p-5 rounded-2xl bg-[#181818] border border-brand-border hover:border-brand-red transition-all flex items-center justify-between gap-4 group min-h-[72px]">
+     <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/40 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><p class="text-xs uppercase font-condensed font-bold tracking-wider text-brand-muted" data-i="c_call">اتصل بنا</p><p dir="ltr" class="text-lg font-bold text-white group-hover:text-brand-orange transition-colors text-start">+216 99 181 337</p></div></div>
+     <span class="text-neutral-400 rtl:-scale-x-100 inline-block">→</span>
+    </a>
+    <a href="https://wa.me/21699181337" target="_blank" rel="noopener" class="p-5 rounded-2xl bg-[#181818] border border-brand-border hover:border-emerald-500 transition-all flex items-center justify-between gap-4 group min-h-[72px]">
+     <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/40 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><p class="text-xs uppercase font-condensed font-bold tracking-wider text-brand-muted" data-i="c_wa">راسلنا</p><p class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">WhatsApp</p></div></div>
+     <span class="text-neutral-400 rtl:-scale-x-100 inline-block">→</span>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100078003473173" target="_blank" rel="noopener" class="p-5 rounded-2xl bg-[#181818] border border-brand-border hover:border-blue-500 transition-all flex items-center justify-between gap-4 group min-h-[72px]">
+     <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/40 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><p class="text-xs uppercase font-condensed font-bold tracking-wider text-brand-muted" data-i="c_fb">صفحتنا</p><p class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Facebook</p></div></div>
+     <span class="text-neutral-400 rtl:-scale-x-100 inline-block">→</span>
+    </a>
+   </div>
+   <a href="https://www.google.com/maps/search/?api=1&query=36.852317,10.3033515" target="_blank" rel="noopener" class="lg:col-span-7 p-6 rounded-3xl bg-[#181818] border border-brand-border hover:border-brand-orange/60 transition-all relative overflow-hidden flex flex-col justify-between min-h-[300px] shadow-2xl">
+    <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image:radial-gradient(#E0301E 1px,transparent 1px),radial-gradient(#F7A31A 1px,#181818 1px);background-size:20px 20px;background-position:0 0,10px 10px"></div>
+    <div class="relative z-10 flex items-start gap-3">
+     <div class="w-10 h-10 rounded-full bg-brand-red/20 border border-brand-red flex items-center justify-center text-brand-red shrink-0">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+     <div><h3 class="font-condensed font-extrabold text-2xl text-white uppercase tracking-wider">Peri Peri</h3><p class="text-brand-muted text-sm mt-1" data-i="c_map">افتح الموقع على خرائط Google للوصول إلينا.</p></div>
+    </div>
+    <div class="relative z-10 mt-8 pt-6 border-t border-brand-border flex justify-end">
+     <span class="px-6 py-3 rounded-full bg-brand-red text-white font-condensed font-bold text-sm uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-brand-red/25 min-h-[44px]"><span data-i="c_dir">الاتجاهات</span><span aria-hidden="true">↗</span></span>
+    </div>
+   </a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="bg-[#070707] border-t border-brand-border text-neutral-400 py-12">
+ <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
+  <img src="images/logo.jpg" alt="" width="56" height="56" loading="lazy" class="w-14 h-14 rounded-full object-cover border border-brand-orange/50 mb-3">
+  <p class="font-flame text-2xl text-white">PERI PERI</p>
+  <p class="text-xs text-brand-muted mt-1 max-w-sm" data-i="f_tag">دجاج طازج غير مجمّد، مشوي على اللهب.</p>
+  <div class="flex flex-wrap justify-center gap-6 py-4 mt-6 border-y border-brand-border/60 text-xs font-bold uppercase tracking-wider w-full">
+   <a class="py-2 hover:text-brand-orange" href="#hero" data-i="n_home">الرئيسية</a><a class="py-2 hover:text-brand-orange" href="#menu" data-i="n_menu">المنيو</a><a class="py-2 hover:text-brand-orange" href="#gallery" data-i="n_gal">المعرض</a><a class="py-2 hover:text-brand-orange" href="#hours" data-i="n_hours">ساعات العمل</a><a class="py-2 hover:text-brand-orange" href="#contact" data-i="n_contact">تواصل</a>
+  </div>
+  <p class="text-xs text-neutral-400 mt-6">© 2026 Peri Peri</p>
+ </div>
+</footer>
+
+<div id="lb" class="fixed inset-0 bg-black/85 hidden place-items-center z-[60] p-3" role="dialog" aria-label="Photo"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="max-h-[94vh] rounded-lg"></div>
+
+<script>
+var M=[
+{id:"chicken",t:{ar:"الدجاج",fr:"Poulet"},note:{ar:"كل وجبة مع 2 مرافقات وصلصة. اختر النكهة: Lemon & Herb، Mango & Lime، Mild، Hot، Extra Hot.",fr:"Chaque repas : 2 accompagnements & sauce. Choisissez la saveur : Lemon & Herb, Mango & Lime, Mild, Hot, Extra Hot."},items:[["Chicken wings","Ailes de poulet",26],["Half Chicken","Demi entier",27],["Chicken steak Butterfly","Steak de poulet",28],["Chicken Thighs","Cuisses de poulet",28],["Chicken Sizzlers","Grésillement de poulet",29],["Whole Chicken","Poulet entier",37],["No bones whole Chicken","Poulet entier désossé",39]],heat:1},
+{id:"pasta",t:{ar:"الباستا",fr:"Pasta"},note:{ar:"اختر الإضافة، ثم نوع الباستا (Penne / Tagliatelle / Spaghetti)، ثم الصلصة (حمراء / وردية / بيضاء)، ثم درجة الحرارة.",fr:"Choisissez le topping, les pâtes (Penne / Tagliatelle / Spaghetti), la sauce (rouge / rosé / blanche) puis le niveau : Mild / Hot / Extra Hot."},items:[["Peri Peri « Spicy Beef »","",32],["Vegetarian","",25],["Cheesy pasta","Roquefort, Mozzarella, Gruyère, Parmesan",29],["King prawns","4 crevettes royales",36],["Smoked Jerky « Beef »","",25],["Puttanesca","",26],["Bolognese","",28]]},
+{id:"platters",t:{ar:"أطباق المشاركة",fr:"Plateaux à partager"},items:[["Wings Platter","20 Chicken Wings + 2 Sides",45],["Meal Platter","Whole Chicken + 4 Chicken Wings + 2 Sides",55],["Jumbo Platter","2 Whole Chicken + 6 Chicken Wings + 4 Sides",85],["No Bones Platter","No bones whole Chicken + 4 Chicken Thighs + 2 Sides",65],["No Bones Jumbo Platter","2 No bones whole Chicken + 6 Chicken Thighs + 4 Sides",95],["Peri Peri Party Platter","4 whole Chicken + 20 Chicken wings + 6 Sides",135]]},
+{id:"starters",t:{ar:"المقبلات",fr:"Appéteasers"},items:[["Peri Peri Hummus","Houmous maison, concombre, carotte, bâtonnets croustillants",6],["Peri Peri Aubergine Caviar","Aubergine grillée, piments marinés, huile d'olive, ognon, persil, pain à l'ail",7],["Peri Peri Nanshos (2 pers.)","Tortillas croustillantes, sauce fromage, viande hachée, sauces maison, tapenade",18],["Peri Peri Nanshos (4 pers.)","",28]]},
+{id:"salads",t:{ar:"السلطات",fr:"Salades"},items:[["Cœur de Laitue au Noix et Roquefort","Laitue, noix, roquette, roquefort, tomate cerise",25],["Salade Estivale","Laitue, tomate cerise, champignon frais, fond d'artichaut, crevette royale, saumon fumé, caviar",35],["Salade César Peri Peri","Escalope de poulet grillé, parmesan, mozzarella épicé, croûton",28],["Salade Niçoise","Laitue, haricot vert, pomme de terre, poivron, concombre, thon, œuf, anchois",23],["Salade Printanier parfumé aux grenadines","Laitue, macédoine de légumes, maïs, haricot rouge, olives farcies",25],["Salade Exotique","Laitue, avocat, escalope de poulet, ananas, kiwi, fruits de saison, sauce Noix de Coco",28]]},
+{id:"eggs",t:{ar:"وجبات البيض",fr:"Eggs meal"},note:{ar:"2 مرافقات وصلصة مع كل طبق. بيض حر (Free Range) +5 DT.",fr:"2 sides & sauce. Œufs de gamme (Free Range) +5 DT."},items:[["Tortilla Espagnole","Omelette épaisse garnie de pomme de terre",17],["Eggs Roll","Omelette roulée",16],["Peri Peri Florentine","Mild / Hot / Extra Hot",16],["Frittata","Poivrons et fromage",18],["Scrambled Eggs","Œufs brouillés",14]]},
+{id:"burgers",t:{ar:"البرغر",fr:"Burgers"},items:[["Fatty Beef Burger 200 g","Sweet BBQ Peri Peri sauce, laitue, tomate, red onion, pickles, gruyère",28],["Fatty Chicken Burger 200 g","Sweet Peri Peri sauce, laitue, tomate, red onion, pickles, gruyère",28]]},
+{id:"sides",t:{ar:"مرافقات وصلصات",fr:"Sides & sauces"},items:[["Sides","Chips, purée cheesy, potatoes wedges, Peri Peri rice, Peri Peri pasta, légumes sautés, pain",7],["Sauces froides","Noix de coco, tapenade, grenadine, roquefort, vinaigrette, César, Peri Peri",2.9],["Sauces chaudes","Champignons, poivre, roquefort, caramel",3.9]]},
+{id:"kids",t:{ar:"وجبة الأطفال",fr:"Kids meal"},note:{ar:"الأطفال دون 10 سنوات يأكلون مجاناً بشروط (طفل واحد لكل بالغ يدفع السعر الكامل، من الاثنين إلى الجمعة 14:00–17:00).",fr:"Les enfants de moins de 10 ans mangent gratuitement : 1 enfant par adulte payant plein tarif, du lundi au vendredi de 14h à 17h."},items:[["Kids Meal","Mini hotdog, mini fillet burger, chicken nuggets, chicken cheese bits, chicken crokids — avec chips et ketchup",10]]}
+];
+var T={
+ar:{n_menu:"المنيو",n_gal:"المعرض",n_hours:"ساعات العمل",n_contact:"تواصل",n_home:"الرئيسية",pill:"دجاج مشوي على اللهب",m_eye:"استمتع بالطعم",m_title:"قائمتنا",m_sub:"الأسعار بالدينار التونسي (DT). أسماء الأطباق ووصفها كما في المنيو الأصلي.",m_orig:"عرض المنيو الأصلي كصورة",g_eye:"الأجواء والنكهات",g_title:"المعرض",h_label:"ساعات العمل",h_every:"كل يوم",on:"مفتوح الآن",off:"مغلق الآن",c_eye:"للتواصل والزيارة",c_title:"تواصل معنا",c_call:"اتصل بنا",c_wa:"راسلنا",c_fb:"صفحتنا",c_map:"افتح الموقع على خرائط Google للوصول إلينا.",c_dir:"الاتجاهات",f_tag:"دجاج طازج غير مجمّد، مشوي على اللهب.",lang:["FR","عربي"]},
+fr:{n_menu:"Menu",n_gal:"Galerie",n_hours:"Horaires",n_contact:"Contact",n_home:"Accueil",pill:"Poulet grillé à la flamme",m_eye:"Savourez l'excellence",m_title:"NOTRE CARTE",m_sub:"Prix en dinars tunisiens (DT).",m_orig:"Voir le menu original en image",g_eye:"Ambiance & saveurs",g_title:"GALERIE",h_label:"Horaires de service",h_every:"tous les jours",on:"Ouvert maintenant",off:"Fermé maintenant",c_eye:"Nous joindre & visite",c_title:"CONTACT",c_call:"Appeler",c_wa:"Écrivez-nous",c_fb:"Notre page",c_map:"Ouvrez notre position sur Google Maps pour nous retrouver.",c_dir:"Itinéraire",f_tag:"Poulet frais, jamais surgelé, grillé à la flamme.",lang:["عربي","FR"]}
+};
+var F=[
+{a:{ar:"مشوي على اللهب",fr:"FLAME-GRILLED"},b:{ar:"أجنحة الدجاج",fr:"CHICKEN WINGS"},p:"26 DT",s:"Lemon & Herb · Mango & Lime · Mild · Hot · Extra Hot",i:"c-wings",d:{ar:"أجنحة دجاج طازجة متبّلة 24 ساعة بالبيري بيري، مشوية على اللهب، مع صنفين جانبيين وصلصة.",fr:"Ailes de poulet fraîches, marinées 24 h dans la Peri-Peri et grillées à la flamme. Servies avec 2 accompagnements & sauce."},bd:{l:{ar:"التتبيلة",fr:"Marinade"},v:{ar:"24 ساعة",fr:"24 h"}}},
+{a:{ar:"بيري بيري",fr:"PERI PERI"},b:{ar:"باستا بالأجبان",fr:"CHEESY PASTA"},p:"29 DT",s:"Mild · Hot · Extra Hot",i:"c-pasta",d:{ar:"روكفور وموزاريلا وغرويير وبارميزان. اختر الباستا والصلصة ودرجة الحرارة.",fr:"Roquefort, mozzarella, gruyère, parmesan. Choisissez vos pâtes, votre sauce et votre niveau de piment."}},
+{a:{ar:"بيري بيري",fr:"PERI PERI"},b:{ar:"ناتشوس",fr:"NANSHOS"},p:"18 DT",s:"2 pers. 18 DT · 4 pers. 28 DT",i:"c-nachos",d:{ar:"تورتيلا مقرمشة منزلية الصنع مع صلصة الجبن واللحم المفروم وصلصات منزلية، تُقدَّم مع التابيناد.",fr:"Tortillas croustillantes maison, sauce fromage, viande hachée et sauces maison, servies avec tapenade."}},
+{a:{ar:"صلصات",fr:"HOMEMADE"},b:{ar:"منزلية الصنع",fr:"SAUCES"},p:"2.9 DT",s:"2.9 DT · 3.9 DT",i:"c-sauces",d:{ar:"صلصات باردة بـ 2.9 DT وساخنة بـ 3.9 DT: جوز الهند، روكفور، فطر، فلفل، كراميل وغيرها.",fr:"Sauces froides à 2,9 DT et chaudes à 3,9 DT : noix de coco, roquefort, champignons, poivre, caramel et plus."}}
+];
+var G=[["interior-mural",{ar:"أجواء المكان",fr:"Ambiance"}],["c-dish-heat",{ar:"أطباقنا",fr:"Nos plats"}],["c-sauces",{ar:"صلصاتنا",fr:"Nos sauces"}],["c-wings",{ar:"أجنحة الدجاج",fr:"Chicken wings"}],["c-pasta",{ar:"الباستا",fr:"Pasta"}],["c-guests",{ar:"أجواء المكان",fr:"Ambiance"}],["c-nachos",{ar:"أطباقنا",fr:"Nos plats"}],["c-taco",{ar:"أطباقنا",fr:"Nos plats"}]];
+var lang="ar",cur="chicken",fi=0,tm;
+function $(i){return document.getElementById(i)}
+function tr(k){return T[lang][k]}
+function feat(){var f=F[fi];$("ha").textContent=f.a[lang];$("hb").textContent=f.b[lang];$("hp").textContent=f.p;$("hs").textContent=f.s;$("hd").textContent=f.d[lang];$("hi").src="images/"+f.i+".jpg";$("pc").textContent="0"+(fi+1);$("pt").textContent="0"+F.length;
+ var b=$("hbadge");if(f.bd){b.classList.remove("hidden");$("hbl").textContent=f.bd.l[lang];$("hbv").textContent=f.bd.v[lang]}else b.classList.add("hidden")}
+function go(d){var s=$("slide");s.classList.add("out");setTimeout(function(){fi=(fi+d+F.length)%F.length;feat();s.classList.remove("out")},300);auto()}
+function auto(){clearInterval(tm);if(!matchMedia("(prefers-reduced-motion:reduce)").matches)tm=setInterval(function(){go(1)},7000)}
+function menu(){
+ var tabs=$("tabs");tabs.innerHTML="";
+ M.forEach(function(c){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");var on=c.id===cur;b.setAttribute("aria-selected",on);
+  b.className="px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider whitespace-nowrap border min-h-[44px] transition-all "+(on?"bg-brand-red text-white border-brand-red shadow-md":"bg-[#1A1A1A] text-neutral-300 hover:text-white border-brand-border hover:border-brand-orange");
+  b.textContent=c.t[lang];b.onclick=function(){cur=c.id;menu()};tabs.appendChild(b)});
+ var c=M.filter(function(x){return x.id===cur})[0];
+ $("note").innerHTML=c.note?'<div class="mb-5 p-4 rounded-xl bg-[#181818] border border-brand-border border-s-4 border-s-brand-red text-sm text-neutral-300">'+c.note[lang]+'</div>':"";
+ $("grid").innerHTML=c.items.map(function(i){return '<article class="p-5 rounded-2xl bg-[#181818] border border-brand-border hover:border-brand-orange/60 transition-all duration-300 shadow-card"><div class="flex justify-between items-start gap-4 mb-2"><h3 class="font-condensed font-bold text-xl sm:text-2xl text-brand-orange uppercase tracking-wide">'+i[0]+'</h3><span dir="ltr" class="shrink-0 px-3 py-1 rounded-full bg-[#242424] border border-brand-border text-white font-condensed font-bold text-base tracking-wider">'+i[2]+' DT</span></div>'+(i[1]?'<p class="text-brand-muted text-sm leading-relaxed">'+i[1]+'</p>':'')+'</article>'}).join("");
+ $("heat").innerHTML=c.heat?'<div class="flex flex-wrap justify-center gap-2 mt-6 text-xs font-bold text-white"><span class="px-3 py-1.5 rounded-full bg-[#566d17]">Lemon &amp; Herb</span><span class="px-3 py-1.5 rounded-full bg-[#e0a21b] text-black">Mango &amp; Lime</span><span class="px-3 py-1.5 rounded-full bg-[#b8470c]">Mild</span><span class="px-3 py-1.5 rounded-full bg-[#d62718]">Hot</span><span class="px-3 py-1.5 rounded-full bg-[#7d1209]">Extra Hot</span></div>':"";
+}
+function status(){var h=+new Intl.DateTimeFormat("en-GB",{hour:"2-digit",hourCycle:"h23",timeZone:"Africa/Tunis"}).format(new Date());var on=h>=11||h<1,e=$("st");
+ e.className="px-5 py-2.5 rounded-full border text-xs sm:text-sm font-bold flex items-center gap-2.5 "+(on?"bg-emerald-950/80 border-emerald-500/60 text-emerald-400":"bg-red-950/80 border-red-500/60 text-red-400");
+ e.innerHTML='<span class="w-2.5 h-2.5 rounded-full '+(on?"bg-emerald-400 animate-pulse":"bg-red-400")+'"></span><span>'+tr(on?"on":"off")+'</span>'}
+function gal(){$("gal").innerHTML=G.map(function(g){return '<button type="button" class="group relative rounded-2xl overflow-hidden bg-[#181818] border border-brand-border aspect-square shadow-card"><img src="images/'+g[0]+'.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"><span class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3 text-xs font-condensed font-bold text-brand-orange uppercase">'+g[1][lang]+'</span></button>'}).join("")}
+function apply(){var h=document.documentElement;h.lang=lang;h.dir=lang==="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=tr(e.dataset.i)});
+ $("l1").textContent=tr("lang")[0];$("l2").textContent=tr("lang")[1];feat();menu();gal();status()}
+$("lang").onclick=function(){lang=lang==="ar"?"fr":"ar";apply()};
+$("pv").onclick=function(){go(-1)};$("nx").onclick=function(){go(1)};
+$("gal").onclick=function(e){var im=e.target.closest("button");if(im){var l=$("lb");l.querySelector("img").src=im.querySelector("img").src;l.classList.remove("hidden");l.classList.add("grid")}};
+$("lb").onclick=function(){this.classList.add("hidden");this.classList.remove("grid")};
+document.addEventListener("keydown",function(e){if(e.key==="Escape")$("lb").onclick.call($("lb"))});
+apply();auto();setInterval(status,60000);
+</script>
+</body>
+</html>
